@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <default revision="pyro" sync-j="4"/>
+
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="ssh://git@gitlab.com/" name="gitlab"/>
+  <remote fetch="git://github.com/aurelihein/" name="aurelihein"/>
+
+  <project remote="yocto" name="poky" revision="pyro" path="sources/poky"/>
+  <project remote="yocto" name="meta-raspberrypi" revision="pyro" path="sources/meta-raspberrypi"/>
+  <project remote="oe" name="meta-openembedded" revision="pyro" path="sources/meta-openembedded"/>
+  <project remote="aurelihein" name="meta-rpi-bouin.git" revision="master" path="sources/meta-rpi-bouin">
+    <copyfile src="rpi-bouin-init-build-env" dest="rpi-bouin-init-build-env" />
+    <copyfile src="README.md" dest="README.md" />
+  </project>
+</manifest>
