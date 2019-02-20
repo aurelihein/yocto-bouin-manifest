@@ -70,3 +70,10 @@ Test The raspberry pi yocto Compilation For Browser / Kiosk / Web Browsing Usage
 	$ repo sync
 	$ source rpi-bouin-init-build-env build
 	$ bitbake rpi-browser-image
+
+Info : https://github.com/Igalia/meta-webkit/wiki/WPE
+You can then try the image with :
+
+	$ export WPE_BCMRPI_TOUCH=1
+	$ export WPE_BCMRPI_CURSOR=1
+	$ cog https://www.primevideo.com
