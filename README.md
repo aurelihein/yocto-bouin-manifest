@@ -1,4 +1,4 @@
-This is manifest repository for raspberry pi yocto compilation
+This is manifest repository for yocto compilation support
 It will allow repo tool to download all projects required to build the bsp.
 
 To install Repo
@@ -15,7 +15,7 @@ Initializing a Repo client
 
 Create an empty directory to hold your working files. Give it any name you like:
 
-	$ WORKING_DIRECTORY="yocto-rpi-$(date +%Y%m%d)"
+	$ WORKING_DIRECTORY="$(date +%Y%m%d)-yocto"
 	$ mkdir $WORKING_DIRECTORY
 	$ cd $WORKING_DIRECTORY
 
@@ -26,7 +26,7 @@ Set up Git if not already done:
 
 Run repo init as the following:
 
-	$ repo init -u https://github.com/aurelihein/yocto-rpi-manifest [build_dir_name]
+	$ repo init -u https://github.com/aurelihein/yocto-bouin-manifest [build_dir_name]
 
 To check out a branch other than "master", specify it with -b.
 
@@ -34,13 +34,17 @@ To check out a branch other than "master", specify it with -b.
 
 Example :
 
-	$ repo init -u https://github.com/aurelihein/yocto-rpi-manifest -b master -m default.xml
+	$ repo init -u https://github.com/aurelihein/yocto-bouin-manifest -b master -m default.xml
 
-Example for testing browser branch implementing WPE :
+Example for testing browser branch implementing WPE with rpi :
 
-	$ repo init -u https://github.com/aurelihein/yocto-rpi-manifest -b master -m wpe.xml
+	$ repo init -u https://github.com/aurelihein/yocto-bouin-manifest -b master -m wpe-rpi.xml
 
-Downloading The raspberry pi yocto Source Tree
+Example for testing browser branch implementing WPE with odroid :
+
+	$ repo init -u https://github.com/aurelihein/yocto-bouin-manifest -b master -m wpe-odroid.xml
+
+Downloading The yocto Source Tree
 ==============================================
 
 	$ repo sync
@@ -60,13 +64,13 @@ Misc
 More information about repo tool can be found here:
 https://source.android.com/source/using-repo.html
 
-Test The raspberry pi yocto Compilation For Browser / Kiosk / Web Browsing Usage
+Test yocto Compilation For Browser / Kiosk / Web Browsing Usage
 =================================================================
 
 	$ WORKING_DIRECTORY="yocto-rpi-browser-$(date +%Y%m%d)"
 	$ mkdir $WORKING_DIRECTORY
 	$ cd $WORKING_DIRECTORY
-	$ repo init -u https://github.com/aurelihein/yocto-rpi-manifest -b master -m wpe.xml
+	$ repo init -u https://github.com/aurelihein/yocto-bouin-manifest -b master -m wpe-rpi.xml
 	$ repo sync
 	$ source rpi-bouin-init-build-env build
 	$ bitbake rpi-browser-image
