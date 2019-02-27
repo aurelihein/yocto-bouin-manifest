@@ -80,4 +80,5 @@ You can then try the image with :
 
 	$ export WPE_BCMRPI_TOUCH=1
 	$ export WPE_BCMRPI_CURSOR=1
+        $ export WPE_DISPLAY_FPS=1
 	$ cog https://www.primevideo.com
