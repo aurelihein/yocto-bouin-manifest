@@ -10,7 +10,7 @@
   <project remote="yocto" name="poky" revision="pyro" path="sources/poky"/>
   <project remote="yocto" name="meta-raspberrypi" revision="pyro" path="sources/meta-raspberrypi"/>
   <project remote="oe" name="meta-openembedded" revision="pyro" path="sources/meta-openembedded"/>
-  <project remote="aurelihein" name="meta-rpi-bouin.git" revision="master" path="sources/meta-rpi-bouin">
+  <project remote="aurelihein" name="meta-bouin.git" revision="master" path="sources/meta-bouin">
     <copyfile src="rpi-bouin-init-build-env" dest="rpi-bouin-init-build-env" />
     <copyfile src="README.md" dest="README.md" />
   </project>

@@ -14,7 +14,7 @@
   <project remote="oe" name="meta-openembedded" revision="sumo" path="sources/meta-openembedded"/>
   <project remote="oss" name="meta-gstreamer1.0.git" revision="sumo" path="sources/meta-gstreamer1.0"/>
   <project remote="igalia" name="meta-webkit.git" revision="sumo" path="sources/meta-webkit"/>
-  <project remote="aurelihein" name="meta-rpi-bouin.git" revision="master" path="sources/meta-rpi-bouin">
+  <project remote="aurelihein" name="meta-bouin.git" revision="master" path="sources/meta-bouin">
     <copyfile src="odroid-bouin-init-build-env" dest="odroid-bouin-init-build-env" />
     <copyfile src="README.md" dest="README.md" />
   </project>
