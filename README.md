@@ -15,8 +15,15 @@ Initializing a Yocto build environment common among severals builds
 
     $ sudo mkdir /yocto
     $ sudo chown $USER:$(id -gn) -R /yocto
-    $ mkdir /yocto/{downloads,sstate-cache-rpi,sstate-cache-odroid}
+    $ mkdir /yocto/{downloads,sstate-cache-rpi,sstate-cache-odroid-c2}
     $ cd /yocto
+
+Download required packages for Yocto
+====================================
+
+    $ sudo apt-get update
+    $ sudo apt-get -y install gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat cpio python python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping libsdl1.2-dev xterm
+    $ sudo apt-get -y install tree htop
 
 Initializing a Repo client
 ==========================
