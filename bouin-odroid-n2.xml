@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <default revision="sumo" sync-j="4"/>
+
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="git://github.com/OSSystems/" name="oss"/>
+  <remote fetch="git://github.com/aurelihein/" name="aurelihein"/>
+  <remote fetch="git://github.com/Igalia/" name="igalia"/>
+  <remote fetch="git://github.com/akuster/" name="odroid"/>
+
+  <project remote="yocto" name="poky" revision="sumo" path="sources/poky"/>
+  <project remote="odroid" name="meta-odroid" revision="master-next" path="sources/meta-odroid"/>
+  <project remote="oe" name="meta-openembedded" revision="sumo" path="sources/meta-openembedded"/>
+  <project remote="oss" name="meta-gstreamer1.0.git" revision="sumo" path="sources/meta-gstreamer1.0"/>
+  <project remote="aurelihein" name="meta-bouin.git" revision="master" path="sources/meta-bouin">
+    <copyfile src="odroid-bouin-init-build-env" dest="odroid-bouin-init-build-env" />
+    <copyfile src="README.md" dest="README.md" />
+  </project>
+</manifest>
