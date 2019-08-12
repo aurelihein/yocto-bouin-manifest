@@ -1,6 +1,8 @@
 This is manifest repository for yocto compilation support
 It will allow repo tool to download all projects required to build the bsp.
 
+NB : Do not run this in root !
+
 To install Repo
 ===============
 
@@ -72,6 +74,17 @@ Building raspberry pi yocto
 The above command will place you in the build directory
 
     $ bitbake rpi-basic-image
+
+Troubles
+====
+
+If you get an error like "Please use a locale setting which supports UTF-8 (such as LANG=en_US.UTF-8)."
+Use this command to add correct export to your $HOME/.bashrc
+
+    $ echo "export LC_ALL=en_US.UTF-8" | tee -a $HOME/.bashrc > /dev/null
+    $ echo "export LANG=en_US.UTF-8" | tee -a $HOME/.bashrc > /dev/null
+    $ echo "export LANGUAGE=en_US.UTF-8" | tee -a $HOME/.bashrc > /dev/null
+    $ source $HOME/.bashrc
 
 Misc
 ====
